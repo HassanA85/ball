@@ -15,23 +15,23 @@ var ball = {
   },
 
   move: function() {
-    this.x += this.speed; // this line is the same as: this.x = this.x + 1;
+    this.y += this.speed; // this line is the same as: this.x = this.x + 1;
   },
 
   checkForBounce: function() {
-    if (this.x > width - this.size / 2) this.bounce();
-    if (this.x < 0 + this.size / 2) this.bounce1();
+    if (this.y > height - this.size / 2) this.bounce();
+    if (this.y < 0 + this.size / 2) this.bounce1();
   },
 
   bounce: function() {
     this.speed = this.speed - 5; // your code goes here; a hint: this will require making your own variable as well as defining this function
     // another hint: notice that ball is defined using object literal notation-
   },
-  
+
   bounce1: function() {
     this.speed = this.speed + 5;
   }
-  
+
 };
 
 var setup = function() { // setup is called only when the sketch starts
